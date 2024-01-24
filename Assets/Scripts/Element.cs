@@ -55,6 +55,10 @@ public class Element : MonoBehaviour
     {
         for ( int i = 0; i < defaultColors.Count; i++)
         {
+            if (parts[i].GetComponent<ChangeRenderingMode>()) 
+            { 
+                parts[i].GetComponent<ChangeRenderingMode>().ChangeMaterialRenderingMode(parts[i].GetComponent<MeshRenderer>().material, RenderingMode.Opaque); 
+            }
             parts[i].GetComponent<MeshRenderer>().material.color = defaultColors[i];
         }
     }
@@ -62,6 +66,10 @@ public class Element : MonoBehaviour
     {
         for (int i = 0; i < defaultColors.Count; i++)
         {
+            if (parts[i].GetComponent<ChangeRenderingMode>())
+            {
+                parts[i].GetComponent<ChangeRenderingMode>().ChangeMaterialRenderingMode(parts[i].GetComponent<MeshRenderer>().material, RenderingMode.Fade);
+            }
             parts[i].GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0, 0.5f);
             //для анимаций сюда добавить флаг -> стал зеленым = запускаем анимацию. Или отслеживать подругому, так пока проще, для демки норм будет решение
         }
