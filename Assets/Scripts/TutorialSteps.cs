@@ -23,33 +23,27 @@ public class TutorialSteps : MonoBehaviour
     {
         isAssembling = flag;
         SetElementParametrs(isAssembling);
-        if (isAssembling) { SetAssembling();}
-        else { SetDisassembling(); }
+        Setup();
     }
-    public void SetAssembling()
+    public void Setup()
     {
         if (i >= 0 && i < elements.Count) elements[i].GetComponent<Element>().SetToDefaultColor();
 
-        i = 0;
-        for(int j = 0; j < elements.Count; j++) 
+        if (isAssembling)
         {
-            elements[j].SetActive(false);
+            i = 0;
+            for(int j = 0; j < elements.Count; j++) 
+            {
+                elements[j].SetActive(false);
+            }
         }
-        //Задаем следующий элемент зеленым
-        elements[i].GetComponent<Element>().SetToGreenColor();
-        elements[i].SetActive(true);
-
-        heading.GetComponent<TMP_Text>().text = elements[i].GetComponent<Element>().Heading;
-        instruction.GetComponent<TMP_Text>().text = elements[i].GetComponent<Element>().Instruction;
-    }
-    public void SetDisassembling()
-    {
-        if(i>=0 && i < elements.Count) elements[i].GetComponent<Element>().SetToDefaultColor();
-
-        i = elements.Count - 1;
-        for (int j = 0; j < elements.Count; j++)
+        else
         {
-            elements[j].SetActive(true);
+            i = elements.Count - 1;
+            for (int j = 0; j < elements.Count; j++)
+            {
+                elements[j].SetActive(true);
+            }
         }
         //Задаем следующий элемент зеленым
         elements[i].GetComponent<Element>().SetToGreenColor();
@@ -142,7 +136,6 @@ public class TutorialSteps : MonoBehaviour
         }
         else
         {
-            
             if (i < elements.Count - 1)
             {
                 //предыдущий, зеленый элемент, включить и сделать цветом из буфера

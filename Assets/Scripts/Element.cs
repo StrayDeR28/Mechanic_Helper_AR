@@ -8,8 +8,8 @@ public class Element : MonoBehaviour
     [SerializeField] internal string Instruction { get; set; }
     [SerializeField] internal string Heading { get; set; }
 
-    [SerializeField] private List<Color> defaultColors = new List<Color>();
     [SerializeField] private List<Transform> parts = new List<Transform>();
+    [SerializeField] private List<Material> defaultMaterials = new List<Material>();
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class Element : MonoBehaviour
             Transform child = gameObject.transform.GetChild(childIterator);
             if (child.GetComponent<MeshRenderer>())
             {
-                defaultColors.Add(child.GetComponent<MeshRenderer>().material.color);
+                defaultMaterials.Add(child.GetComponent<MeshRenderer>().material);
                 parts.Add(child);
             }
             if (child.transform.childCount > 0)//Если у ребенка есть дети
@@ -42,7 +42,7 @@ public class Element : MonoBehaviour
                     Transform child2 = child.transform.GetChild(j);
                     if (child2.GetComponent<MeshRenderer>())
                     {
-                        defaultColors.Add(child2.GetComponent<MeshRenderer>().material.color);
+                        defaultMaterials.Add(child2.GetComponent<MeshRenderer>().material);
                         parts.Add(child2);
                     }
                 }
@@ -53,24 +53,20 @@ public class Element : MonoBehaviour
 
     public void SetToDefaultColor()
     {
-        for ( int i = 0; i < defaultColors.Count; i++)
+        for ( int i = 0; i < defaultMaterials.Count; i++)
         {
-            if (parts[i].GetComponent<ChangeRenderingMode>()) 
-            { 
-                parts[i].GetComponent<ChangeRenderingMode>().ChangeMaterialRenderingMode(parts[i].GetComponent<MeshRenderer>().material, RenderingMode.Opaque); 
-            }
-            parts[i].GetComponent<MeshRenderer>().material.color = defaultColors[i];
+            parts[i].GetComponent<MeshRenderer>().material = defaultMaterials[i];
         }
     }
     public void SetToGreenColor()
     {
-        for (int i = 0; i < defaultColors.Count; i++)
+        for (int i = 0; i < defaultMaterials.Count; i++)
         {
-            if (parts[i].GetComponent<ChangeRenderingMode>())
+            if (parts[i].GetComponent<MaterialsSwitcher>())
             {
-                parts[i].GetComponent<ChangeRenderingMode>().ChangeMaterialRenderingMode(parts[i].GetComponent<MeshRenderer>().material, RenderingMode.Fade);
+                Material tmpMaterial = parts[i].GetComponent<MaterialsSwitcher>().SetGreenMaterial();
+                parts[i].GetComponent<MeshRenderer>().material = tmpMaterial;
             }
-            parts[i].GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0, 0.5f);
             //для анимаций сюда добавить флаг -> стал зеленым = запускаем анимацию. Или отслеживать подругому, так пока проще, для демки норм будет решение
         }
     }
