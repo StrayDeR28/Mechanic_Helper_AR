@@ -1542,6 +1542,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parts: []
   defaultMaterials: []
+--- !u!114 &635119608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635119605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd1dc3b0ddc3c64eb6f1f8789d7a21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1281477952}
 --- !u!1 &657109363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3006053435585758687, guid: 33382e2f12748014eb036662879608f7, type: 3}
@@ -2423,6 +2436,26 @@ MonoBehaviour:
   heading: {fileID: 48645575}
   instruction: {fileID: 333403474}
   congrats: "\u0423\u0441\u043F\u0435\u0445"
+--- !u!95 &1281477952
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281477948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e7d3d544f13ded408c94a33df5cb096, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1281899751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4130636091631564930, guid: 33382e2f12748014eb036662879608f7, type: 3}
@@ -3520,6 +3553,62 @@ PrefabInstance:
     - target: {fileID: 7575126192567426473, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202946672353136675, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_Name
+      value: bolts_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442850649828315038, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722977873584223178, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195018881333958785, guid: 33382e2f12748014eb036662879608f7, type: 3}
+      propertyPath: m_Name
+      value: bolts_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33382e2f12748014eb036662879608f7, type: 3}

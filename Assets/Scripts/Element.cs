@@ -53,6 +53,8 @@ public class Element : MonoBehaviour
 
     public void SetToDefaultColor()
     {
+        if (gameObject.name == "Bolts") { gameObject.GetComponent<BoltsAnimation>().StopFlyAnimation(); }
+
         for ( int i = 0; i < defaultMaterials.Count; i++)
         {
             parts[i].GetComponent<MeshRenderer>().material = defaultMaterials[i];
@@ -60,6 +62,13 @@ public class Element : MonoBehaviour
     }
     public void SetToGreenColor()
     {
+        //для анимаций сюда добавить флаг -> стал зеленым = запускаем анимацию. Или отслеживать подругому, так пока проще, для демки норм будет решение
+        if (gameObject.name == "Bolts") 
+        {
+            print("zelenie bolti letat");
+            gameObject.GetComponent<BoltsAnimation>().PlayFlyAnimation(); 
+        }
+
         for (int i = 0; i < defaultMaterials.Count; i++)
         {
             if (parts[i].GetComponent<MaterialsSwitcher>())
@@ -67,7 +76,7 @@ public class Element : MonoBehaviour
                 Material tmpMaterial = parts[i].GetComponent<MaterialsSwitcher>().SetGreenMaterial();
                 parts[i].GetComponent<MeshRenderer>().material = tmpMaterial;
             }
-            //для анимаций сюда добавить флаг -> стал зеленым = запускаем анимацию. Или отслеживать подругому, так пока проще, для демки норм будет решение
+            
         }
     }
 }
