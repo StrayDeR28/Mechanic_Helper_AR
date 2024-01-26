@@ -65,7 +65,6 @@ public class Element : MonoBehaviour
         //для анимаций сюда добавить флаг -> стал зеленым = запускаем анимацию. Или отслеживать подругому, так пока проще, для демки норм будет решение
         if (gameObject.name == "Bolts") 
         {
-            print("zelenie bolti letat");
             gameObject.GetComponent<BoltsAnimation>().PlayFlyAnimation(); 
         }
 
