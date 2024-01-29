@@ -2326,6 +2326,7 @@ GameObject:
   - component: {fileID: 779855300}
   - component: {fileID: 779855298}
   - component: {fileID: 779855297}
+  - component: {fileID: 779855302}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2362,7 +2363,7 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -2407,6 +2408,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779855302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779855296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c0e0a378963fa43aab8d540fffb10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &818665404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,23 +4480,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5426087525227273138, guid: 33382e2f12748014eb036662879608f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
