@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class InverseCamera : MonoBehaviour
 {
+    [SerializeField] private Quaternion initialRotation;
+    [SerializeField] private Quaternion gyroInitialRotation;
+    private Camera cam;
+    private void Awake()
+    {
+        cam = Camera.main;
+        initialRotation = transform.rotation;
+        gyroInitialRotation = Input.gyro.attitude;
+    }
     void Update()
     {
-        float moveHorizontal = -Input.acceleration.x;
-        float moveVertical = -Input.acceleration.y;
-
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        float speed = Input.gyro.rotationRate.magnitude;
-        transform.Translate(movement * speed * Time.deltaTime);
+        Quaternion offsetRotation = Quaternion.Inverse(gyroInitialRotation) * Input.gyro.attitude;
+        cam.transform.localRotation = initialRotation * offsetRotation;
     }
 }
