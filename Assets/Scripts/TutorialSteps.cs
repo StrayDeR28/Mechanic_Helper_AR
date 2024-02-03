@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Xml.Linq;
 
 public class TutorialSteps : MonoBehaviour
 {
@@ -14,9 +13,9 @@ public class TutorialSteps : MonoBehaviour
 
     [SerializeField] private GameObject heading;
     [SerializeField] private GameObject instruction;
+    [SerializeField] private Animator animator;
 
     private int i = 0;
-    //private Color tmpColor = Color.white;
     [SerializeField] private string congrats = "ura pobeda";
 
     public void SetAssemblingType(bool flag)
