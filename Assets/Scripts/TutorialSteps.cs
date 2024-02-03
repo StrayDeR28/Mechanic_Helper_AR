@@ -47,7 +47,7 @@ public class TutorialSteps : MonoBehaviour
         else
         {
             i = elements.Count - 1;
-            animator.SetInteger("Step", i);
+            animator.SetInteger("RStep", i);
             animator.SetTrigger("EndPosition");
             for (int j = 0; j < elements.Count; j++)
             {
@@ -103,7 +103,7 @@ public class TutorialSteps : MonoBehaviour
             {
                 //сделать текущий цветом из буфера
                 elements[i].GetComponent<Element>().SetToDefaultColor();
-                animator.SetInteger("Step", i);
+                animator.SetInteger("RStep", i);
                 elements[i].SetActive(false);
             }
             if (i == 0)
@@ -119,7 +119,7 @@ public class TutorialSteps : MonoBehaviour
                 instruction.GetComponent<TMP_Text>().text = elements[i].GetComponent<Element>().Instruction;
                 //зеленым следующий элемент
                 elements[i].GetComponent<Element>().SetToGreenColor();
-                animator.SetInteger("Step", i);
+                animator.SetInteger("RStep", i);
                 elements[i].SetActive(true);
             }
 
@@ -156,12 +156,12 @@ public class TutorialSteps : MonoBehaviour
                 {
                     elements[i].GetComponent<Element>().SetToDefaultColor();
                     elements[i].SetActive(true);
-                    animator.SetInteger("Step", i);
+                    animator.SetInteger("RStep", i);
                 }
 
                 i++;
                 elements[i].SetActive(true);
-                animator.SetInteger("Step", i);
+                animator.SetInteger("RStep", i);
                 heading.GetComponent<TMP_Text>().text = elements[i].GetComponent<Element>().Heading;
                 instruction.GetComponent<TMP_Text>().text = elements[i].GetComponent<Element>().Instruction;
                 //текущий становится зеленым и не выключается
