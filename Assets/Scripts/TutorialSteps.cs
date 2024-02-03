@@ -16,7 +16,6 @@ public class TutorialSteps : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private int i = 0;
-    [SerializeField] private int animationsCount = 16;
     [SerializeField] private string congrats = "ura pobeda";
 
     private void Awake()
