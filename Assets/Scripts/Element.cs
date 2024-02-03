@@ -21,10 +21,13 @@ public class Element : MonoBehaviour
             {
                 for (int j = 0; j < child.transform.childCount; j++)
                 {
-                    childCount++;
+                    if (child.GetChild(j).GetComponent<MeshRenderer>())
+                    {
+                        childCount++;
+                    }
                 }
             }
-            else { childCount++; }
+            else if (child.GetComponent<MeshRenderer>()) { childCount++; }
         }
         int childIterator = 0;
         for (int i = 0; i < childCount; i++)//Заносим в лист цветов изначальные цвета
@@ -53,7 +56,7 @@ public class Element : MonoBehaviour
 
     public void SetToDefaultColor()
     {
-        if (gameObject.name == "Bolts") { gameObject.GetComponent<BoltsAnimation>().StopFlyAnimation(); }
+        if (gameObject.name == "Bolts") { gameObject.GetComponent<BoltsAnimation>().StopFlyAnimation(); }//Хардкод для одной анимации, переделать
 
         for ( int i = 0; i < defaultMaterials.Count; i++)
         {
