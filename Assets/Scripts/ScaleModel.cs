@@ -13,13 +13,13 @@ public class ScaleModel : MonoBehaviour
         Vector3 scale = model.transform.localScale;
         Vector3 position = model.transform.localPosition;
         model.transform.localScale = new Vector3(scale.x * scaleCoef, scale.y * scaleCoef, scale.z * scaleCoef);
-        model.transform.localPosition = new Vector3(position.x * scaleCoef, position.y, position.z);
+        //model.transform.localPosition = new Vector3(position.x * scaleCoef, position.y, position.z);
     }
     public void ScaleDown()
     {
         Vector3 scale = model.transform.localScale;
         Vector3 position = model.transform.localPosition;
         model.transform.localScale = new Vector3(scale.x / scaleCoef, scale.y / scaleCoef, scale.z / scaleCoef);
-        model.transform.localPosition = new Vector3(position.x / scaleCoef, position.y, position.z);
+        //model.transform.localPosition = new Vector3(position.x / scaleCoef, position.y / scaleCoef, position.z / scaleCoef);
     }
 }
