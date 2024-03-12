@@ -13,26 +13,9 @@ public class Element : MonoBehaviour
 
     private void Awake()
     {
-        int childCount = 0;//количество детей без детей + количество детей у детей
-        for (int k = 0; k < gameObject.transform.childCount; k++)//считаем количество элементов с материалами
+        for (int i = 0; i < gameObject.transform.childCount; i++)//Заносим в лист цветов изначальные цвета
         {
-            Transform child = gameObject.transform.GetChild(k);
-            if (child.transform.childCount > 0)
-            {
-                for (int j = 0; j < child.transform.childCount; j++)
-                {
-                    if (child.GetChild(j).GetComponent<MeshRenderer>())
-                    {
-                        childCount++;
-                    }
-                }
-            }
-            else if (child.GetComponent<MeshRenderer>()) { childCount++; }
-        }
-        int childIterator = 0;
-        for (int i = 0; i < childCount; i++)//Заносим в лист цветов изначальные цвета
-        {
-            Transform child = gameObject.transform.GetChild(childIterator);
+            Transform child = gameObject.transform.GetChild(i);
             if (child.GetComponent<MeshRenderer>())
             {
                 defaultMaterials.Add(child.GetComponent<MeshRenderer>().material);
@@ -50,7 +33,6 @@ public class Element : MonoBehaviour
                     }
                 }
             }
-            childIterator++;
         }
     }
 
