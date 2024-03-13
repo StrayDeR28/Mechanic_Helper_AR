@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 5d8b7fe55d599c643873c0c9ba718ca2
-  - enabled: 0
-    path: Assets/Scenes/ObjectTracking.unity
-    guid: 13fa20e656b20944b837c0338d7549e7
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 87c1f9189575e6e47b11133c65282b2d, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 136be274212cc0247a26b88cd93aa152, type: 2}
