@@ -9,7 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 5d8b7fe55d599c643873c0c9ba718ca2
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 87c1f9189575e6e47b11133c65282b2d, type: 2}
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 136be274212cc0247a26b88cd93aa152, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8afffe88c5614e845929aa99da04110c, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 58056a1f70979044eb18e902ddabccdd, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 3a9c27ed186bbfc4da02a3531e6a9cbb, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c1d49f62ae425aa439bbb3c8f97a7669, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 32baef10015462d44b00c44cd4fe9709, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 38d05da066c51ae4e99adad8742f6b22, type: 2}
